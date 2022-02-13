@@ -58,11 +58,11 @@ $pageOffset = 0;
 
 
     <div class="pagination mt-3">
-      Page <?= $offset + 1 ?> / <?= $totalPage + 1 ?>
+      Page <?= $pageOffset + 1 ?> / <?= $totalPage + 1 ?>
     </div>
     <div class="navigation-pagination">
-      <?php if($offset >= $limit * $pageOffset){ echo '<a class="link-primary" href="?offset=' . $limit * ($pageOffset - 1) . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Previous</a>'; } ?>
-      <?php if($offset < $totalPage){ echo '<a class="link-primary" href="?offset=' . $limit * ($pageOffset + 1) . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Next</a>'; } ?>
+      <?php if($pageOffset > 0){ echo '<a class="link-primary" href="?offset=' . $limit * ($pageOffset - 1) . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Previous</a>'; } ?>
+      <?php if($pageOffset < $totalPage){ echo '<a class="link-primary" href="?offset=' . $limit * ($pageOffset + 1) . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Next</a>'; } ?>
     </div>
 
 
