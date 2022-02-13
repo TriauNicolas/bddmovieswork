@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - '5555:80'
+        env_file:
+            - .env
+        volumes:
+            - ./app:/var/www/html
+
+    db:
+        image: 'mariadb:10.6.4'
+        restart: always
+        ports:
+            - '3310'
+        environment:
+            - .env
+        env_file:
+            - .env
