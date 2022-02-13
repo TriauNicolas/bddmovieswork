@@ -1,7 +1,7 @@
 <?php
 
 // Call bdd with the first basic call sql
-include '../src/PDOCall.php';
+include './PDOCall.php';
 
 $keysTitles = array_keys($sakilaDBFetch[0]);
 
