@@ -20,12 +20,14 @@ if(isset($_GET['limit'])) {
   $limit = 10;
 }
 
-$offset = 0;
-if(isset($_GET['offset'])) {
-  $offset = $_GET['offset'];
+$pageOffset = 0;
+if(isset($_GET['pageOffset'])) {
+  $pageOffset = $_GET['pageOffset'];
 } else {
-  $offset = 0;
+  $pageOffset = 0;
 }
+
+$offset = $limit * $pageOffset;
 
 $groupBy = 'title';
 if(isset($_GET['groupBy'])) {
