@@ -60,7 +60,7 @@ $keysTitles = array_keys($sakilaDBFetch[0]);
     </div>
     <div class="navigation-pagination">
       <?php if($pageOffset > 0){ echo '<a class="link-primary" href="?pageOffset=' . $pageOffset - 1 . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Previous</a>'; } ?>
-      <?php if($pageOffset < $totalPage){ echo '<a class="link-primary" href="?pageOffset=' . $pageOffset + 1 . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Next</a>'; } ?>
+      <?php if($pageOffset + 1 < $totalPage){ echo '<a class="link-primary" href="?pageOffset=' . $pageOffset + 1 . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Next</a>'; } ?>
     </div>
 
 
