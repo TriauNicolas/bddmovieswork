@@ -1,6 +1,6 @@
 <?php
 
-ini_set('display_errors', '0');
+ini_set('display_errors', '1');
 
 $sakilaDB = new \PDO('mysql:host=' . $_ENV['MYSQL_HOST'] . ';port=' . $_ENV['MYSQL_PORT'] . ';dbname=' . $_ENV['MYSQL_DATABASE'], $_ENV['MYSQL_USER'], $_ENV['MYSQL_ROOT_PASSWORD']);
 
