@@ -60,7 +60,7 @@ $sakilaDBFetch = $sakilaDBstmt->fetchAll(PDO::FETCH_ASSOC);
 $resultCount = $sakilaDB->prepare('SELECT count(title) as result FROM film');
 $resultCount->execute();
 $resultCountFetch = $resultCount->fetchAll(PDO::FETCH_ASSOC);
-$totalPage = ceil($resultCountFetch[0]['result'] / $limit);
+$totalPage = $resultCountFetch[0]['result'] / $limit;
 
 // BASIC CALL
 
