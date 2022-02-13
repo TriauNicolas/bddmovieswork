@@ -21,6 +21,11 @@ if(isset($_GET['limit'])) {
 }
 
 $pageOffset = 0;
+if(isset($_GET['pageOffset'])) {
+  $pageOffset = $_GET['pageOffset'];
+} else {
+  $pageOffset = 0;
+}
 
 $offset = $limit * $pageOffset;
 
