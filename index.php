@@ -5,8 +5,6 @@ include './PDOCall.php';
 
 $keysTitles = array_keys($sakilaDBFetch[0]);
 
-$pageOffset = 0;
-
 ?>
 
 <!DOCTYPE html>
@@ -61,8 +59,8 @@ $pageOffset = 0;
       Page <?= $pageOffset + 1 ?> / <?= $totalPage + 1 ?>
     </div>
     <div class="navigation-pagination">
-      <?php if($pageOffset > 0){ $pageOffset -= 1; echo '<a class="link-primary" href="?&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Previous</a>'; } ?>
-      <?php if($pageOffset < $totalPage){ $pageOffset += 1; echo '<a class="link-primary" href="?&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Next</a>'; } ?>
+      <?php if($pageOffset > 0){ $pageOffset -= 1; echo '<a class="link-primary" href="?pageOffset=' . $pageOffset . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Previous</a>'; } ?>
+      <?php if($pageOffset < $totalPage){ $pageOffset += 1; echo '<a class="link-primary" href="?pageOffset=' . $pageOffset . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Next</a>'; } ?>
     </div>
 
 
