@@ -2,7 +2,16 @@
 
 ini_set('display_errors', '1');
 
-$sakilaDB = new \PDO('mysql:host=' . $_ENV['MYSQL_HOST'] . ';port=' . $_ENV['MYSQL_PORT'] . ';dbname=' . $_ENV['MYSQL_DATABASE'], $_ENV['MYSQL_USER'], $_ENV['MYSQL_ROOT_PASSWORD']);
+$MYSQL_HOST='163.172.130.142';
+$MYSQL_PORT='3310';
+
+$MYSQL_DATABASE='sakila';
+$MYSQL_ROOT_PASSWORD='CrERP29qwMNvcbnAMgLzW9CwuTC5eJHn';
+
+$MYSQL_USER='etudiant';
+$MYSQL_PASSWORD='CrERP29qwMNvcbnAMgLzW9CwuTC5eJHn';
+
+$sakilaDB = new \PDO('mysql:host=' . $MYSQL_HOST . ';port=' . $MYSQL_PORT . ';dbname=' . $MYSQL_DATABASE, $MYSQL_USER, $MYSQL_ROOT_PASSWORD);
 
 $limit = 10;
 if(isset($_GET['limit'])) {
