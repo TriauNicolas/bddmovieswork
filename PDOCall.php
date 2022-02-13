@@ -20,7 +20,7 @@ if(isset($_GET['limit'])) {
   $limit = 10;
 }
 
-$pageOffset;
+$pageOffset = 0;
 if(isset($_GET['pageOffset'])) {
   $pageOffset = $_GET['pageOffset'];
 } else {
