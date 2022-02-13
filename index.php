@@ -56,7 +56,7 @@ $keysTitles = array_keys($sakilaDBFetch[0]);
 
 
     <div class="pagination mt-3">
-      Page <?= $pageOffset + 1 ?> / <?= $totalPage + 1 ?>
+      Page <?= $pageOffset + 1 ?> / <?= $totalPage ?>
     </div>
     <div class="navigation-pagination">
       <?php if($pageOffset > 0){ echo '<a class="link-primary" href="?pageOffset=' . $pageOffset - 1 . '&limit='.$limit.'&groupBy='.$groupBy.'&desc='.$desc.'">Previous</a>'; } ?>
